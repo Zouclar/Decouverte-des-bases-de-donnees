@@ -2,6 +2,17 @@ CREATE DATABASE e_canette;
 
 USE e_canette;
 
+CREATE TABLE Rôle (
+       ID SMALLINT UNSIGNED NOT NULL,
+       Libelle VARCHAR(40) NOT NULL,
+       Description VARCHAR(255),
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID)
+       )
+ENGINE=INNODB;
+
+
 CREATE TABLE Utilisateurs (
        ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
        Nom VARCHAR(40) NOT NULL,
@@ -12,25 +23,12 @@ CREATE TABLE Utilisateurs (
        Code_postal MEDIUMINT(5) UNSIGNED NOT NULL,
        Pays VARCHAR(30) NOT NULL,
        Sexe CHAR(1) NOT NULL,
-       Rôle VARCHAR(30) NOT NULL,
+       Rôle SMALLINT UNSIGNED NOT NULL,
        Date_creation DATETIME NOT NULL,
        Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-       PRIMARY KEY (ID)
+       PRIMARY KEY (ID),
+       FOREIGN KEY (ID) REFERENCES Rôle(ID)
 )
-ENGINE=INNODB;
-
-INSERT INTO Utilisateurs
-VALUES (1, 'MESRATI', 'NADA', '1994-01-21', 'FONTENAY SOUS BOIS', '77 rue Pasteur', '94120', 'France', 'F', 'Mangeur de chocolat', '2014-12-01', '2014-12-01'),
-       (NULL, 'ZUMBIHL', 'Maxime', '1994-11-18', 'Suresens', '25 rue Peronnet', '92250', 'France', 'M', 'Patate', '2014-12-01', '2014-12-01');
-
-CREATE TABLE Rôle (
-       ID SMALLINT UNSIGNED NOT NULL,
-       Libelle VARCHAR(40) NOT NULL,
-       Description VARCHAR(255),
-       Date_creation DATETIME NOT NULL,
-       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-       FOREIGN KEY (ID) REFERENCES Utilisateurs(ID)
-       )
 ENGINE=INNODB;
 
 CREATE TABLE Produits (
