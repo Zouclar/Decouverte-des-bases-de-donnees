@@ -2,17 +2,6 @@ CREATE DATABASE e_canette;
 
 USE e_canette;
 
-CREATE TABLE Rôle (
-       ID SMALLINT UNSIGNED NOT NULL,
-       Libelle VARCHAR(40) NOT NULL,
-       Description VARCHAR(255),
-       Date_creation DATETIME NOT NULL,
-       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-       PRIMARY KEY (ID)
-       )
-ENGINE=INNODB;
-
-
 CREATE TABLE Utilisateurs (
        ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
        Nom VARCHAR(40) NOT NULL,
@@ -23,12 +12,22 @@ CREATE TABLE Utilisateurs (
        Code_postal MEDIUMINT(5) UNSIGNED NOT NULL,
        Pays VARCHAR(30) NOT NULL,
        Sexe CHAR(1) NOT NULL,
-       Rôle SMALLINT UNSIGNED NOT NULL,
+       Rôle SMALLINT UNSIGNED  NOT NULL,
        Date_creation DATETIME NOT NULL,
        Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
        PRIMARY KEY (ID),
-       FOREIGN KEY (ID) REFERENCES Rôle(ID)
+       FOREIGN KEY (Rôle) REFERENCES Rôle(ID)
 )
+ENGINE=INNODB;
+
+CREATE TABLE Rôle (
+       ID SMALLINT UNSIGNED NOT NULL,
+       Libelle VARCHAR(40) NOT NULL,
+       Description VARCHAR(255),
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID)
+       )
 ENGINE=INNODB;
 
 CREATE TABLE Produits (
