@@ -34,8 +34,8 @@ CREATE TABLE Produits (
        ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
        Libelle VARCHAR(40) NOT NULL,
        Description VARCHAR(255),
-       Prix_achat INT UNSIGNED NOT NULL,
-       Prix_vente INT UNSIGNED,
+       Prix_achat FLOAT UNSIGNED NOT NULL,
+       Prix_vente FLOAT UNSIGNED,
        Nombre_produits INT UNSIGNED NOT NULL,
        Date_creation DATETIME NOT NULL,
        Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -54,9 +54,9 @@ CREATE TABLE Categories (
 ENGINE=INNODB;
 
 CREATE TABLE Categorie_Produit (
-       ID_categorie SMALLINT UNSIGNED NOT NULL,
+       ID_categorie SMALLINT UNSIGNED NULL,
        FOREIGN KEY (ID_categorie) REFERENCES Categories(ID),
-       ID_produit SMALLINT UNSIGNED NOT NULL,
+       ID_produit SMALLINT UNSIGNED NULL,
        FOREIGN KEY (ID_produit) REFERENCES Produits(ID)
 )
 ENGINE=INNODB;
