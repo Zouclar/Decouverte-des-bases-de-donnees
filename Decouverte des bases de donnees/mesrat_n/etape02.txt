@@ -38,3 +38,18 @@ VALUES (1, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '10', '2014-12-03',)
        (, 'Fanta', 'Soda sans pulpe avec plusieurs gouts(orange, citron)', '2.10', '2.20', '2014-12-03',),
        (, 'coca-cola', 'Soda au gout unique à base de feuilles de coca et de caramel', '2.20', '2.30', '2014-12-03',),
        (, 'Pepsi', 'Immitation ratée du coca-cola, mais plus fuité', '2.30', '2.40', '2014-12-03',);
+
+
+INSERT INTO Categorie_Produit
+VALUES (2,1),
+       (2,2),
+       (2,3),
+       (2,4),
+       (2,5),
+       (1,8),
+       (1,10),
+       (1,11),
+       (3,12),
+       (3,13),
+       (3,14),
+       (3,15);
