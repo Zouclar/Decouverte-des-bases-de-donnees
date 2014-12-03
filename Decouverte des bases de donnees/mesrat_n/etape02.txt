@@ -1,0 +1,40 @@
+INSERT INTO Rôle
+VALUES (1, 'Administrateur', 'Gère les bases de données', '2014-12-03',),
+       (2, 'Vendeur', 'Vend les produits', '2014-12-03',),
+       (3, 'Acheteur', 'Achète les produits', '2014-12-03',),
+       (4, 'Gereur', 'Gère les stocks', '2014-12-03',);
+
+
+INSERT INTO Utilisateurs
+VALUES (1, 'MESRATI', 'Nada', '1994-01-21', 'FONTENAY SOUS BOIS', '77 rue Pasteur', '94120', 'France', 'F', 1, '2014-12-03', ),
+       (, 'NAKACHE', 'Thomas', '1996-01-11', 'Ivry sur Seine', '15 rue Maurice', '94150', 'France', 'M', 1, '2014-12-03',),
+       (, 'BATTELLO', 'Clovis', '1996-05-01', 'NOGENT SUR MARNE', '1 rue de la maladie', '94052', 'France', 'M', 1, '2014-12-03',),
+       (, 'ZUMBIHL', 'Maxime', '1994-11-18', 'Suresens', '25 rue Peronnet', '92250', 'France', 'M', 3, '2014-12-01',)
+       (, 'BEN HALIMA', 'Belkys', '1992-02-04', 'St Leu La Foret', '32 rue de Bellebue', '95320', 'France', 'F', 3, '2014-12-03',),
+       (, 'NGUYEN', 'Benjamin', '1994-06-01', 'Kremelin', '15 rue Pasteur', '94043', 'France', 'M', 2, '2014-12-03',),
+       (, 'DELOUVEE', 'Edwin', '1995-07-22', 'Paris', '7 rue Moulineaux', '75016', 'France', 'M', 2, '2014-12-03',),
+       (, 'ROUSSE', 'Kevin', '1996-06-21', 'Paris', '12 rue Des Ecoles', '75005', 'France', 'M', 4, '2014-12-03',),
+       (, 'EMILE', 'Chantal', '1993-10-18', 'Les Lillas', '3 Boulevard de la Liberte', '93045', 'France', 'F', 3, '2014-12-03',),
+       (, 'LIM', 'Charlie', '1995-09-15', 'Bussy Saint Georges', '25 rue des maisons', '77600', 'France', 'M', 3, '2014-12-03',);
+
+INSERT INTO Categories
+VALUES (1, 'Salé', 'Produits qui ne sont pas sucrés', '2014-12-03',),
+       (, 'Sucré', 'Produits qui ne sont pas salés', '2014-12-03',),
+       (, 'Boisson', 'Produits liquides', '2014-12-03',);
+
+INSERT INTO Produits
+VALUES (1, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '10', '2014-12-03',),
+       (, 'Mars', 'Barre de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Twix', '4 barres de chocolats', '1.10', '1.20', '2014-12-03',),
+       (, 'Kinder', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',),
+       (, 'Kit Kat', '4 barres de chocolats', '1', '1.10', '2014-12-03',);
