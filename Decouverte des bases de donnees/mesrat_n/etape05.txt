@@ -1,1 +1,1 @@
-SELECT Libelle FROM Produits WHERE ID <= 5;
+SELECT * FROM Produits LIMIT 5;
