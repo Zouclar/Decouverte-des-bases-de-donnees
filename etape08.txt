@@ -1,0 +1,5 @@
+SELECT Produits.Libelle 
+FROM Produits 
+INNER JOIN Categorie_Produit 
+ON Categorie_Produit.ID_produit = Produits.ID 
+WHERE Categorie_Produit.ID_categorie IS NULL;
