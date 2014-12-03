@@ -1,0 +1,70 @@
+CREATE DATABASE e_canette;
+
+USE e_canette;
+
+CREATE TABLE Utilisateurs (
+       ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+       Nom VARCHAR(40) NOT NULL,
+       Prenom VARCHAR(40) NOT NULL,
+       Date_de_naissance DATE NOT NULL,
+       Ville VARCHAR(40),
+       Adresse VARCHAR(50),
+       Code_postal MEDIUMINT(5) UNSIGNED NOT NULL,
+       Pays VARCHAR(30) NOT NULL,
+       Sexe CHAR(1) NOT NULL,
+       Rôle SMALLINT UNSIGNED  NOT NULL,
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID),
+       FOREIGN KEY (Rôle) REFERENCES Rôle(ID)
+)
+ENGINE=INNODB;
+
+CREATE TABLE Rôle (
+       ID SMALLINT UNSIGNED NOT NULL,
+       Libelle VARCHAR(40) NOT NULL,
+       Description VARCHAR(255),
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID)
+       )
+ENGINE=INNODB;
+
+CREATE TABLE Produits (
+       ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+       Libelle VARCHAR(40) NOT NULL,
+       Description VARCHAR(255),
+       Prix_achat INT UNSIGNED NOT NULL,
+       Prix_vente INT UNSIGNED,
+       Nombre_produits INT UNSIGNED NOT NULL,
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID)
+)
+ENGINE=INNODB;
+
+CREATE TABLE Categories (
+       ID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+       Libelle VARCHAR(40) NOT NULL,
+       Description VARCHAR(255),
+       Date_creation DATETIME NOT NULL,
+       Date_modification TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       PRIMARY KEY (ID)
+       )
+ENGINE=INNODB;
+
+CREATE TABLE Categorie_Produit (
+       ID_categorie SMALLINT UNSIGNED NOT NULL,
+       FOREIGN KEY (ID_categorie) REFERENCES Categories(ID),
+       ID_produit SMALLINT UNSIGNED NOT NULL,
+       FOREIGN KEY (ID_produit) REFERENCES Produits(ID)
+)
+ENGINE=INNODB;
+
+CREATE TABLE Produit_Utilisateur (
+       ID_produit SMALLINT UNSIGNED NOT NULL,
+       FOREIGN KEY (ID_produit) REFERENCES Produits(ID),
+       ID_utilisateur SMALLINT UNSIGNED NOT NULL,
+       FOREIGN KEY (ID_utilisateur) REFERENCES Utilisateurs(ID)
+)
+ENGINE=INNODB;
