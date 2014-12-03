@@ -1,0 +1,1 @@
+SELECT Libelle FROM Produits WHERE ID <= 5;
