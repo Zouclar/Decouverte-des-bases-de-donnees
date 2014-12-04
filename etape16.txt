@@ -1,0 +1,1 @@
+SELECT Produits.Description, Categories.* FROM Produits JOIN Categorie_Produit ON Produits.ID = Categorie_Produit.ID_produit JOIN Categories ON Categories.ID = Categorie_Produit.ID_categorie;

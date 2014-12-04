@@ -1,0 +1,1 @@
+SELECT Produits.Libelle, Categories.* FROM Produits  LEFT JOIN Categorie_Produit ON Produits.ID = Categorie_Produit.ID_produit LEFT JOIN Categories ON Categories.ID = Categorie_Produit.ID_categorie;
