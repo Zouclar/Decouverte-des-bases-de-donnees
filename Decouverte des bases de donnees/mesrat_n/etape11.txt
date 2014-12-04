@@ -1,0 +1,1 @@
+SELECT Nom FROM Utilisateurs WHERE ID = 2 OR ID = 7;

@@ -1,1 +1,1 @@
-SELECT ID FROM Categories WHERE ID = 1 OR ID = 3;
+SELECT Libelle FROM Categories WHERE ID = 1 OR ID = 3;

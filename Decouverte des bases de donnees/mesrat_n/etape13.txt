@@ -1,0 +1,3 @@
+UPDATE Utilisateurs
+SET Nom='MARTIN', Prenom='Martine', Date_de_naissance='1994-12-31', Ville='Ma Ville', Adresse='Mon Adresse', Code_postal='69000', Pays='Mon Pays', Sexe='F', Rôle='3', Date_creation='2014-12-04', Date_modification=CURRENT_TIMESTAMP
+WHERE ID=5;
