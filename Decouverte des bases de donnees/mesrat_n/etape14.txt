@@ -1,0 +1,1 @@
+SELECT Utilisateurs.Nom, Utilisateurs.Prenom, Rôle.ID, Rôle.Libelle, Rôle.Description FROM Utilisateurs LEFT JOIN Rôle ON Utilisateurs.Rôle=Rôle.ID;
