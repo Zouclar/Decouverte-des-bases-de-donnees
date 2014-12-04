@@ -1,0 +1,1 @@
+SELECT Libelle FROM Produits WHERE Prix_vente > 0.50;
