@@ -1,1 +1,1 @@
-SELECT Libelle FROM Produits.Libelle Categories.Libelle;
+SELECT Produits.Libelle, Categories.Libelle FROM Produits, Categories;
