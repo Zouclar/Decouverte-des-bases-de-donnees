@@ -1,2 +1,2 @@
-SELECT Nom, Prenom, Date_de_naissance FROM Utilisateurs ORDER BY Date_de_naissance; ##Orde decroissant : Du plus vieux au plus jeune;
+SELECT Nom, Prenom, Date_de_naissance FROM Utilisateurs ORDER BY Date_de_naissance DESC;
 SELECT Nom, Prenom, Date_de_naissance FROM Utilisateurs ORDER BY Nom;
