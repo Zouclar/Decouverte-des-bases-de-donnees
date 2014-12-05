@@ -1,0 +1,4 @@
+SET foreign_key_checks = 0;
+DELETE FROM Utilisateurs,
+WHERE ID = '3';
+SET foreign_key_checks = 1;
